@@ -1,0 +1,87 @@
+# ================================================================= #
+# KOTLIN MULTIPLATFORM PROJECT .gitignore                           #
+# ================================================================= #
+
+# ----------------------------------------------------------------- #
+# 1. BUILD ARTIFACTS AND DIRECTORIES (GENERATED)                      #
+# ----------------------------------------------------------------- #
+/build/
+.gradle
+.idea/libraries/
+.kotlin/
+.kotlin_gradle/
+*.iml
+
+# ----------------------------------------------------------------- #
+# 2. KOTLIN/NATIVE (K/N) GENERATED FILES                            #
+# ----------------------------------------------------------------- #
+# Kotlin/Native compiler caches, often large
+**/.konan/
+**/.konan_deps/
+# K/N linker files
+*.klib
+# cinterop generated source files
+**/*interop.kt
+
+# ----------------------------------------------------------------- #
+# 3. ANDROID SPECIFIC ARTIFACTS                                     #
+# ----------------------------------------------------------------- #
+# Android build output and temp files
+/local.properties
+/captures/
+# Android Studio specific files
+.idea/caches/
+.idea/codeStyles/
+.idea/gradle.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/assetWizardSettings.xml
+# Android build files
+*.apk
+*.aab
+*.aar
+*.ap_
+*.dex
+*.class
+/app/build/
+/app/.cxx/
+/app/local.properties
+
+# ----------------------------------------------------------------- #
+# 4. IOS/MACOS/XCODE SPECIFIC ARTIFACTS                             #
+# ----------------------------------------------------------------- #
+# Xcode workspace and user data
+*.xcworkspace
+*.xcscmblueprint
+*.xcscheme
+# Pods (Dependency Manager)
+/Pods/
+Podfile.lock
+# Swift Package Manager (SPM) artifacts
+.swiftpm/
+# Xcode build directories
+/DerivedData/
+# Other macOS files
+.DS_Store
+
+# ----------------------------------------------------------------- #
+# 5. IDE SPECIFIC FILES (IntelliJ / VSCode)                         #
+# ----------------------------------------------------------------- #
+# IntelliJ IDEA
+.idea/
+# Except for necessary files like code styles or run configurations
+!/app/.idea/codeStyles/
+!/app/.idea/runConfigurations.xml
+
+# VS Code
+.vscode/
+
+# ----------------------------------------------------------------- #
+# 6. PLATFORM SPECIFIC OUTPUT FOLDERS (Common KMP structure)        #
+# ----------------------------------------------------------------- #
+/android/build/
+/desktop/build/
+/js/build/
+/wasm/build/
+/wasmJs/build/

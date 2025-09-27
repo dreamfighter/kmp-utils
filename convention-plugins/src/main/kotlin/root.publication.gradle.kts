@@ -6,7 +6,7 @@ plugins {
 
 allprojects {
     group = "com.github.dreamfighter.kmp"
-    version = "0.0.5"
+    version = "0.0.6"
 }
 
 val localProperties = File(rootDir, "local.properties").inputStream().use {

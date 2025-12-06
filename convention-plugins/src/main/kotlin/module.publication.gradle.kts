@@ -34,8 +34,8 @@ publishing {
 
         // Provide artifacts information required by Maven Central
         pom {
-            name.set("Kotlin Multiplatform library")
-            description.set("Dummy library to test deployment to Maven Central")
+            name.set("Kotlin Multiplatform Utils")
+            description.set("Kotlin Multiplatform Utils")
             url.set("https://github.com/dreamfighter/kmp-utils")
 
             licenses {
@@ -46,7 +46,7 @@ publishing {
             }
             developers {
                 developer {
-                    id.set("JetBrains")
+                    id.set("dreamfighter")
                     name.set("JetBrains Team")
                     organization.set("JetBrains")
                     organizationUrl.set("https://www.jetbrains.com")
@@ -60,8 +60,10 @@ publishing {
 }
 
 signing {
-    if (project.hasProperty("signing.gnupg.keyName")) {
-        useGpgCmd()
-        sign(publishing.publications)
-    }
+    // Find all Maven publications and sign them
+    useGpgCmd()
+    //val secretKeyFile = System.getenv("HOME") + "/.gnupg/secring.gpg"
+    // Use an absolute path string directly
+    //useInMemoryPgpKeys(localProperties["gpg.signing.id"].toString(), localProperties["gpg.signing.secret"].toString(), project.file(secretKeyFile).readBytes())
+    sign(publishing.publications)
 }

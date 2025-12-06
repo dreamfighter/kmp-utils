@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     id("module.publication")
-    id("io.github.ttypic.swiftklib") version "0.6.4"
+    id("io.github.ttypic.swiftklib") version "0.6.2"
 }
 
 kotlin {

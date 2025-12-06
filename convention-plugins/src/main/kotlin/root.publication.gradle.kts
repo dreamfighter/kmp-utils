@@ -5,8 +5,8 @@ plugins {
 }
 
 allprojects {
-    group = "com.github.dreamfighter.kmp"
-    version = "0.0.6"
+    group = "io.github.dreamfighter"
+    version = "0.0.7"
 }
 
 val localProperties = File(rootDir, "local.properties").inputStream().use {
@@ -22,8 +22,8 @@ nexusPublishing {
         sonatype {  //only for users registered in Sonatype after 24 Feb 2021
             username = localProperties["sonatype.username"].toString()
             password = localProperties["sonatype.password"].toString()
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+            nexusUrl.set(uri("https://ossrh-staging-api.central.sonatype.com/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://central.sonatype.com/repository/maven-snapshots/"))
         }
     }
 }
